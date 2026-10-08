@@ -1,4 +1,4 @@
-const photo=n=>`photos/photo-${String(n).padStart(2,'0')}.jpg`;
+const photo=n=>`photo-${String(n).padStart(2,'0')}.jpg`;
 const price=p=>p.price===null?'Prix à confirmer':new Intl.NumberFormat('fr-MA',{style:'currency',currency:shop.currency,maximumFractionDigits:0}).format(p.price);
 const number=()=>shop.whatsapp.replace(/\D/g,'');
 const hasWhatsApp=()=>/^[1-9]\d{7,14}$/.test(number());
