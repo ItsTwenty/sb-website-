@@ -17,3 +17,13 @@ window.products = [
  {id:'SB15',name:'Elisa Bag · Sac à chaîne',color:'Noir & écru',photos:[17],price:199},
  {id:'SB16',name:'Le sac à foulard',color:'Beige clair & écru',photos:[20],price:199}
 ];
+const confirmedPrices = {
+  SB01: 90, SB02: 90, SB03: 90, SB04: 100,
+  SB05: 200, SB06: 230, SB07: 200, SB08: 200,
+  SB09: 270, SB10: 270, SB11: 250, SB12: 250,
+  SB13: 200, SB14: 280, SB15: 200, SB16: 280
+};
+
+window.products.forEach(product => {
+  product.price = confirmedPrices[product.id];
+});
